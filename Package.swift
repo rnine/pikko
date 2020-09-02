@@ -6,13 +6,14 @@ import PackageDescription
 let package = Package(
     name: "Pikko",
     platforms: [
-        .iOS(.v8),
+        .iOS(.v9),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "Pikko",
-            targets: ["Pikko"]),
+            targets: ["Pikko"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,10 +25,12 @@ let package = Package(
         .target(
             name: "Pikko",
             dependencies: [],
-            path: "Pikko/Sources"),
+            path: "Pikko/Sources"
+        ),
         .testTarget(
             name: "PikkoTests",
             dependencies: ["Pikko"],
-            path: "Pikko/Tests"),
+            path: "Pikko/Tests"
+        ),
     ]
 )
